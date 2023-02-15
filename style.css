@@ -1,17 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
 nav.navbar {
   background-color: transparent !important;
   padding: 20px 40px !important;
+  position: fixed;
+  width: 100%;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
 }
 
 .navbar-brand {
   color: white !important;
   font-family: "montserrat";
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.navbar-brand:hover {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  text-shadow: 1px 1px 0px #2f77f4, -1px 2px 0px #da5f7e, -1px -1px 0px #ed752f94;
 }
 
 .navbar-toggler-icon {
   -webkit-filter: invert(1);
           filter: invert(1);
+  z-index: 20 !important;
+  position: absolute;
 }
 
 @media (min-width: 992px) {
@@ -26,6 +47,17 @@ ul li a {
   color: white !important;
   font-family: "montserrat" !important;
   font-size: 14px !important;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-animation: flickw 4s ease-in-out infinite forwards normal !important;
+          animation: flickw 4s ease-in-out infinite forwards normal !important;
+}
+
+ul li a:hover {
+  border-left: 5px solid white !important;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  text-shadow: 1px 1px 0px #2f77f4, -1px 2px 0px #da5f7e, -1px -1px 0px #ed752f94;
 }
 
 body {
@@ -77,6 +109,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 80vh;
+  padding-top: 50px;
 }
 
 .hero-txt .main h3 {
@@ -86,7 +119,7 @@ body {
 
 .hero-txt .main h1 {
   font-family: "betatron" !important;
-  font-size: 12em !important;
+  font-size: calc(12em - 10vw) !important;
   color: white !important;
   line-height: 1;
   overflow: hidden;
@@ -119,6 +152,12 @@ body {
   height: 80px;
   background: -webkit-gradient(linear, left top, right top, from(#ed752f), color-stop(47.92%, #da5f7e), to(#2f77f4));
   background: linear-gradient(90deg, #ed752f, #da5f7e 47.92%, #2f77f4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   overflow: hidden;
@@ -133,14 +172,15 @@ body {
   display: flex;
 }
 
+.hero-txt .marquee .marquee-txt h3 {
+  font-size: 3.4em;
+  width: 700px;
+}
+
 .hero-txt .marquee .marquee-txt a {
   text-decoration: none;
   color: black !important;
   width: 100%;
-}
-
-.hero-txt .marquee .marquee-txt a h3 {
-  font-size: 4em;
 }
 
 @-webkit-keyframes slide {
@@ -163,5 +203,391 @@ body {
     -webkit-transform: translateX(200px);
             transform: translateX(200px);
   }
+}
+
+section.sec2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.sec2 h1 {
+  color: white !important;
+  font-family: "betatron" !important;
+  width: 60%;
+  font-size: 3em !important;
+  text-align: center;
+}
+
+section.sec2 p {
+  color: white !important;
+  width: 50%;
+  text-align: center;
+}
+
+section.sec2 video {
+  padding: 20px;
+  width: 500px;
+}
+
+section.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding-top: 150px;
+  position: relative;
+}
+
+section.cards .serv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px;
+}
+
+section.cards .serv h1 {
+  text-decoration: underline;
+  font-family: "betatron" !important;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+section.cards .cardwr {
+  padding: 40px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 60px;
+}
+
+section.cards .cardwr .card {
+  background-color: black !important;
+  width: 300px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 20;
+  padding-top: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+section.cards .cardwr .card:hover {
+  background-color: white !important;
+  color: black;
+}
+
+section.cards .cardwr .card:hover h2 {
+  color: #2f77f4;
+}
+
+section.cards .cardwr .card:hover img {
+  -webkit-filter: invert(0);
+          filter: invert(0);
+  width: 65px;
+}
+
+section.cards .cardwr .card h2 {
+  text-align: center;
+  font-family: "betatron" !important;
+}
+
+section.cards .cardwr .card p {
+  width: 70%;
+  font-family: "montserrat";
+  text-align: center;
+}
+
+section.cards .cardwr .card img {
+  width: 60px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+section.form {
+  font-family: "montserrat";
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+section.form .home a {
+  text-decoration: none;
+  color: white;
+  text-decoration: underline;
+  position: absolute;
+  left: 0;
+  padding: 30px;
+  font-size: 2em;
+  font-weight: 500;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+  top: 0;
+}
+
+section.form .footwr {
+  width: 50%;
+  height: 70vh;
+  background-color: white;
+  padding: 20px;
+  border-radius: 9px;
+}
+
+section.form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+
+section.form form h2 {
+  font-weight: 500;
+  font-size: 2em;
+}
+
+section.form form .cnt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.form form .hello {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid black;
+}
+
+section.form form .hello h3 {
+  font-weight: 700;
+  font-size: medium;
+}
+
+section.form form .butn {
+  margin-top: 10px;
+}
+
+section.form form .butn button {
+  border-radius: 27px;
+  padding: 10px 25px;
+  border: none;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  background-color: #2f77f4;
+}
+
+section.form form .butn button:hover {
+  border: 2px solid black;
+  background-color: transparent;
+}
+
+@media (max-width: 650px) {
+  section.form .footwr {
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  section.form .footwr {
+    width: 95%;
+  }
+}
+
+section.Portf {
+  color: white !important;
+}
+
+section.Portf h2 {
+  text-decoration: underline;
+  font-family: "betatron" !important;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+section.Portf .works {
+  padding-left: 20px;
+}
+
+section.Portf .works h1 {
+  font-family: "betatron" !important;
+  font-size: 5em;
+}
+
+section.Portf .works .work-it {
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+section.Portf .works .work-it:hover {
+  background-color: white;
+  color: black !important;
+}
+
+footer {
+  padding-top: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+}
+
+footer h1 {
+  width: 50%;
+  font-size: 5em;
+  text-align: center;
+  font-family: "betatron" !important;
+  color: white;
+  margin-bottom: 50px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  text-shadow: 1px 1px 0px #2f77f4, -1px 2px 0px #da5f7e, -1px -1px 0px #ed752f94;
+}
+
+footer h1 span {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  text-shadow: none;
+}
+
+footer .txtwr2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white !important;
+}
+
+footer .txtwr2 p {
+  font-family: "montserrat";
+}
+
+footer .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  color: white !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .address .loc P {
+  width: 50%;
+  text-align: left;
+  font-family: "montserrat";
+}
+
+footer .address .mail p {
+  font-family: "montserrat";
+}
+
+footer .address .mail p a {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  color: white;
+}
+
+footer .foot {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 55px;
+  border-top: 2px solid white;
+  z-index: 20;
+}
+
+footer .foot .socal a {
+  text-decoration: underline;
+  color: white !important;
+  padding-right: 10px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+footer .foot .socal a:hover {
+  color: #da5f7e !important;
 }
 /*# sourceMappingURL=style.css.map */
