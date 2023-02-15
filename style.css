@@ -1,0 +1,167 @@
+nav.navbar {
+  background-color: transparent !important;
+  padding: 20px 40px !important;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-family: "montserrat";
+  font-weight: 700;
+}
+
+.navbar-toggler-icon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    -webkit-box-flex: 0.6;
+        -ms-flex-positive: 0.6;
+            flex-grow: 0.6;
+  }
+}
+
+ul li a {
+  color: white !important;
+  font-family: "montserrat" !important;
+  font-size: 14px !important;
+}
+
+body {
+  background-color: black !important;
+}
+
+.hero-txt {
+  height: 100vh;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero-txt .link_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero-txt .link_txt a {
+  text-decoration: underline;
+  color: white !important;
+}
+
+.hero-txt .link_txt p {
+  width: 40%;
+  color: white;
+}
+
+.hero-txt .main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80vh;
+}
+
+.hero-txt .main h3 {
+  font-size: 2em;
+  color: white;
+}
+
+.hero-txt .main h1 {
+  font-family: "betatron" !important;
+  font-size: 12em !important;
+  color: white !important;
+  line-height: 1;
+  overflow: hidden;
+  height: auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-txt .main h1:hover {
+  color: rgba(219, 129, 129, 0) !important;
+  -webkit-text-stroke: 2px white;
+}
+
+.hero-txt .main h1 span {
+  color: rgba(219, 129, 129, 0);
+  -webkit-text-stroke: 2px white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-txt .main h1 span:hover {
+  color: white;
+}
+
+.hero-txt .marquee {
+  position: fixed;
+  right: -200px;
+  top: 280px;
+  width: 600px;
+  height: 80px;
+  background: -webkit-gradient(linear, left top, right top, from(#ed752f), color-stop(47.92%, #da5f7e), to(#2f77f4));
+  background: linear-gradient(90deg, #ed752f, #da5f7e 47.92%, #2f77f4);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  overflow: hidden;
+}
+
+.hero-txt .marquee .marquee-txt {
+  -webkit-animation: slide 7s linear infinite forwards normal;
+          animation: slide 7s linear infinite forwards normal;
+  font-family: "betatron" !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-txt .marquee .marquee-txt a {
+  text-decoration: none;
+  color: black !important;
+  width: 100%;
+}
+
+.hero-txt .marquee .marquee-txt a h3 {
+  font-size: 4em;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

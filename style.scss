@@ -1,0 +1,122 @@
+$beat: "betatron" !important ;
+$mont: "montserrat";
+$grad: linear-gradient(90deg, #ed752f, #da5f7e 47.92%, #2f77f4);
+
+nav.navbar {
+  background-color: transparent !important;
+  padding: 20px 40px !important;
+}
+.navbar-brand {
+  color: white !important;
+  font-family: $mont;
+  font-weight: 700;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    flex-grow: 0.6;
+  }
+}
+
+ul li a {
+  color: white !important;
+  font-family: $mont !important;
+  font-size: 14px !important    ;
+}
+body {
+  background-color: black !important;
+}
+
+.hero-txt {
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .link_txt {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    a {
+      text-decoration: underline;
+      color: white !important;
+    }
+    p {
+      width: 40%;
+      color: white;
+    }
+  }
+  .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    h3 {
+      font-size: 2em;
+      color: white;
+    }
+    h1 {
+      font-family: $beat;
+      font-size: 12em !important;
+      color: white !important;
+      line-height: 1;
+      overflow: hidden;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: rgba(219, 129, 129, 0) !important;
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+      }
+      span {
+        color: rgba(219, 129, 129, 0);
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+
+  .marquee {
+    position: fixed;
+    right: -200px;
+    top: 280px;
+    // z-index: 30;
+    width: 600px;
+    height: 80px;
+    background: $grad;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: row;
+    transform: rotate(90deg);
+    overflow: hidden;
+    .marquee-txt {
+      //   width: 100%;
+      animation: slide 7s linear infinite forwards normal;
+      font-family: $beat;
+      display: flex;
+      a {
+        text-decoration: none;
+        color: black !important;
+        width: 100%;
+        h3 {
+          font-size: 4em;
+          // width: 100%;
+        }
+      }
+    }
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(200px);
+      }
+    }
+  }
+}
