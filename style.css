@@ -234,7 +234,12 @@ section.sec2 p {
 
 section.sec2 video {
   padding: 20px;
-  width: 500px;
+  width: 60%;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-box-shadow: 1px 1px 10px #2f77f4, -1px 2px 10px #da5f7e, -1px -1px 10px #ed752f94;
+          box-shadow: 1px 1px 10px #2f77f4, -1px 2px 10px #da5f7e, -1px -1px 10px #ed752f94;
+  margin-bottom: 30px;
 }
 
 section.cards {
