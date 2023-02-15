@@ -119,7 +119,7 @@ body {
 
 .hero-txt .main h1 {
   font-family: "betatron" !important;
-  font-size: calc(12em - 10vw) !important;
+  font-size: 12em !important;
   color: white !important;
   line-height: 1;
   overflow: hidden;
@@ -579,6 +579,14 @@ footer .foot {
   z-index: 20;
 }
 
+footer .foot .socal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 footer .foot .socal a {
   text-decoration: underline;
   color: white !important;
@@ -589,5 +597,39 @@ footer .foot .socal a {
 
 footer .foot .socal a:hover {
   color: #da5f7e !important;
+}
+
+@media (max-width: 1020px) {
+  .hero-txt .main h1 {
+    font-family: "betatron" !important;
+    font-size: 9em !important;
+  }
+}
+
+@media (max-width: 830px) {
+  .hero-txt .main h1 {
+    font-family: "betatron" !important;
+    font-size: 7em !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-txt .main h1 {
+    font-family: "betatron" !important;
+    font-size: 4.5em !important;
+  }
+}
+
+@media (max-width: 600px) {
+  footer h1 {
+    font-size: 4em !important;
+  }
+}
+
+@media (max-width: 460px) {
+  .hero-txt .link_txt {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 /*# sourceMappingURL=style.css.map */
