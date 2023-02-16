@@ -1,14 +1,38 @@
 $beat: "betatron" !important ;
 $mont: "montserrat";
 $grad: linear-gradient(90deg, #ed752f, #da5f7e 47.92%, #2f77f4);
+@import url(./Betatron-Regular-Web/Betatron-Regular.woff);
+@import url(./Betatron-Regular-Web/Betatron-Regular.woff2);
+@import url(./stylesheet-family-support.css);
+@import url(./stylesheet-individual-weights.css);
 @font-face {
   font-family: "Betatron-Regular";
-  src: url(./Betatron-Regular.otf);
-  src: url(./betatron/Betatron-Regular.otf);
+  src: url("Betatron-Regular.woff2") format("woff2"),
+    url("Betatron-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: "Betatron";
+  src: url("Betatron-Regular.woff2") format("woff2"),
+    url("Betatron-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: "Betatron-Regular";
+//   src: url(./Betatron-Regular.otf);
+//   src: url(./betatron/Betatron-Regular.otf);
+// }
 // @import url(./Betatron-Regular.otf);
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Sedgwick+Ave&family=Signika:wght@300;400;500;600;700&display=swap");
 
+body {
+  font-family: "Betatron", "Betatron-Regular";
+}
 html {
   scroll-behavior: smooth;
 }
