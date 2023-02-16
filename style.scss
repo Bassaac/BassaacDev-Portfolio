@@ -150,7 +150,7 @@ body {
     top: 280px;
     // z-index: 30;
     width: 600px;
-    height: 80px;
+    height: 7vw;
     background: $grad;
     display: flex;
     align-items: center;
@@ -158,15 +158,22 @@ body {
     // flex-direction: row;
     transform: rotate(90deg);
     overflow: hidden;
+    transition: 0.5s all ease-in-out;
+    z-index: 200;
+    &:hover {
+      background: white !important;
+      color: black !important;
+      transition: 0.5s all ease-in-out;
+    }
     .marquee-txt {
       //   width: 100%;
-      animation: slide 7s linear infinite forwards normal;
+      animation: slide 47s linear infinite forwards normal;
       font-family: $beat;
       // margin: auto;
       display: flex;
       h3 {
-        font-size: 3.4em;
-        width: 700px;
+        font-size: 4vw;
+        width: 40vw;
       }
 
       a {
@@ -179,10 +186,10 @@ body {
     }
     @keyframes slide {
       0% {
-        transform: translateX(0);
+        transform: translateX(-10%);
       }
       100% {
-        transform: translateX(200px);
+        transform: translateX(-100%);
       }
     }
   }
@@ -198,7 +205,7 @@ section.sec2 {
     color: white !important;
     font-family: $beat;
     width: 60%;
-    font-size: 3em !important;
+    font-size: 9vw !important;
     text-align: center;
   }
   p {
@@ -399,7 +406,7 @@ section.Portf {
     padding-left: 20px;
     h1 {
       font-family: $beat;
-      font-size: 5em;
+      font-size: 10vw;
     }
     .work-it {
       transition: 0.3s all ease-in-out;
@@ -433,7 +440,7 @@ footer {
   // }
   h1 {
     width: 50%;
-    font-size: 5em;
+    font-size: 9vw;
     text-align: center;
     font-family: $beat;
     color: white;
@@ -539,7 +546,7 @@ footer {
 }
 @media (max-width: 600px) {
   footer h1 {
-    font-size: 4em !important;
+    // font-size: 3vw !important;
   }
 }
 @media (max-width: 460px) {

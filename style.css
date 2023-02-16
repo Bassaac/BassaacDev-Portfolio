@@ -174,7 +174,7 @@ body {
   right: -200px;
   top: 280px;
   width: 600px;
-  height: 80px;
+  height: 7vw;
   background: -webkit-gradient(linear, left top, right top, from(#ed752f), color-stop(47.92%, #da5f7e), to(#2f77f4));
   background: linear-gradient(90deg, #ed752f, #da5f7e 47.92%, #2f77f4);
   display: -webkit-box;
@@ -186,11 +186,21 @@ body {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   overflow: hidden;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  z-index: 200;
+}
+
+.hero-txt .marquee:hover {
+  background: white !important;
+  color: black !important;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 .hero-txt .marquee .marquee-txt {
-  -webkit-animation: slide 7s linear infinite forwards normal;
-          animation: slide 7s linear infinite forwards normal;
+  -webkit-animation: slide 47s linear infinite forwards normal;
+          animation: slide 47s linear infinite forwards normal;
   font-family: "betatron" !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,8 +208,8 @@ body {
 }
 
 .hero-txt .marquee .marquee-txt h3 {
-  font-size: 3.4em;
-  width: 700px;
+  font-size: 4vw;
+  width: 40vw;
 }
 
 .hero-txt .marquee .marquee-txt a {
@@ -210,23 +220,23 @@ body {
 
 @-webkit-keyframes slide {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
   }
   100% {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
 @keyframes slide {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
   }
   100% {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
@@ -247,7 +257,7 @@ section.sec2 h1 {
   color: white !important;
   font-family: "betatron" !important;
   width: 60%;
-  font-size: 3em !important;
+  font-size: 9vw !important;
   text-align: center;
 }
 
@@ -500,7 +510,7 @@ section.Portf .works {
 
 section.Portf .works h1 {
   font-family: "betatron" !important;
-  font-size: 5em;
+  font-size: 10vw;
 }
 
 section.Portf .works .work-it {
@@ -533,7 +543,7 @@ footer {
 
 footer h1 {
   width: 50%;
-  font-size: 5em;
+  font-size: 9vw;
   text-align: center;
   font-family: "betatron" !important;
   color: white;
@@ -647,12 +657,6 @@ footer .foot .socal a:hover {
   .hero-txt .main h1 {
     font-family: "betatron" !important;
     font-size: 4.5em !important;
-  }
-}
-
-@media (max-width: 600px) {
-  footer h1 {
-    font-size: 4em !important;
   }
 }
 
