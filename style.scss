@@ -250,7 +250,7 @@ section.cards {
   }
 
   .cardwr {
-    padding: 40px;
+    padding: 50px;
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
@@ -265,7 +265,7 @@ section.cards {
       align-items: center;
       position: relative;
       justify-content: center;
-      z-index: 20;
+      // z-index: 20;
       padding-top: 10px;
       transition: all 0.5s ease-in-out;
       &:hover {

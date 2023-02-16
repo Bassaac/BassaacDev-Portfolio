@@ -308,7 +308,7 @@ section.cards .serv h1 {
 }
 
 section.cards .cardwr {
-  padding: 40px;
+  padding: 50px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   display: -webkit-box;
@@ -337,7 +337,6 @@ section.cards .cardwr .card {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 20;
   padding-top: 10px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
